@@ -58,24 +58,39 @@ namespace HenryWoods_ConnectFour
                     }
                     else { Coord = Coord + 100; }
                 }
-                //MessageBox.Show("" + CellArray.GetValue(Column,Row));
-                Graphics g = CreateGraphics();
-                //Creating 2 separate colours for each player
-                SolidBrush PlayerColor;
-                SolidBrush Red = new SolidBrush(Color.Red);
-                SolidBrush Blue = new SolidBrush(Color.Blue);
-                if(PlayerOnesTurn == true) { PlayerColor = Red; } else { PlayerColor = Blue; }
-                
-                //Draws circle representing the players move
-                g.FillEllipse(PlayerColor, new Rectangle(CellArray[Column,Row].getCoordX()-94, CellArray[Column, Row].getCoordY()- 95, 88, 88));
+
+                // Search the column for an empty cell, If Empty cell is found, Row will be re-assigned.
+                bool ColumnHasAFreeSpace = false;
+                for(int i=5; i > -1;i = i -1)
+                {
+                    if (CellArray[Column, i].getPlayerOccupied().Equals(0))
+                    {
+                        ColumnHasAFreeSpace = true;
+                        Row = i;
+                        break;
+                    }
+                }
+
+                if (ColumnHasAFreeSpace == true)
+                {
+                    //MessageBox.Show("" + CellArray.GetValue(Column,Row));
+                    Graphics g = CreateGraphics();
+                    //Creating 2 separate colours for each player
+                    SolidBrush PlayerColor;
+                    SolidBrush Red = new SolidBrush(Color.Red);
+                    SolidBrush Blue = new SolidBrush(Color.Blue);
+                    if (PlayerOnesTurn == true) { PlayerColor = Red; } else { PlayerColor = Blue; }
+
+                    //Draws circle representing the players move
+                    g.FillEllipse(PlayerColor, new Rectangle(CellArray[Column, Row].getCoordX() - 94, CellArray[Column, Row].getCoordY() - 95, 88, 88));
 
 
-                // Set the occupied space to the designated player
-                if (PlayerOnesTurn == true) { CellArray[Column, Row].setPlayerOccupied(1); CheckWinner(1); } else { CellArray[Column, Row].setPlayerOccupied(2); CheckWinner(2); }
+                    // Set the occupied space to the designated player
+                    if (PlayerOnesTurn == true) { CellArray[Column, Row].setPlayerOccupied(1); CheckWinner(1); } else { CellArray[Column, Row].setPlayerOccupied(2); CheckWinner(2); }
 
-                //Changes the players turn
-                if (PlayerOnesTurn == true) { PlayerOnesTurn = false; } else { PlayerOnesTurn = true; }
-
+                    //Changes the players turn
+                    if (PlayerOnesTurn == true) { PlayerOnesTurn = false; } else { PlayerOnesTurn = true; }
+                } else { MessageBox.Show("Invalid Selection: Please choose again."); }
 
                 
 
@@ -104,6 +119,7 @@ namespace HenryWoods_ConnectFour
                     }
                     else if(! CellArray[x, y].getPlayerOccupied().Equals(Player)){ WinCounter = 0; }
                 }
+                WinCounter = 0;
             }
             //CHECK HORIZONTAL
             for (int x = 0; x != 6; x++)
@@ -118,6 +134,7 @@ namespace HenryWoods_ConnectFour
                     }
                     else if (!CellArray[y, x].getPlayerOccupied().Equals(Player)) { WinCounter = 0; }
                 }
+                WinCounter = 0;
             }
 
 
@@ -139,8 +156,10 @@ namespace HenryWoods_ConnectFour
                             WinCounter += 1;
                             if (WinCounter == 4) { MessageBox.Show("Player" + Player + " WINS"); }
                         }
+                        else { WinCounter = 0; }
                         if (Column == 6 || Row == 5) { WinCounter = 0; break; } else { Row += 1;Column += 1; }
                     }
+                    WinCounter = 0;
                     Row = StartingRow;
                     if (WinCounter == 4) { break; }
                 }
@@ -163,8 +182,10 @@ namespace HenryWoods_ConnectFour
                             WinCounter += 1;
                             if (WinCounter == 4) { MessageBox.Show("Player" + Player + " WINS"); }
                         }
+                        else { WinCounter = 0; }
                         if (Column == 0 || Row == 5) { WinCounter = 0; break; } else { Row += 1; Column -= 1; }
                     }
+                    WinCounter = 0;
                     Row = StartingRow;
                     if (WinCounter == 4) { break; }
                 }
@@ -218,7 +239,7 @@ namespace HenryWoods_ConnectFour
         }
 
 
-
+        //This method creates the game board by using the form as a canvas and painting rectangles directly to it.
         private void frmConnectFour_Paint(object sender, PaintEventArgs e)
         {
             int RowCoord = 0;
