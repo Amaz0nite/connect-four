@@ -38,7 +38,6 @@
             this.Name = "frmConnectFour";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmConnectFour";
-            this.Load += new System.EventHandler(this.frmConnectFour_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.frmConnectFour_Paint);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ScreenClick);
             this.ResumeLayout(false);

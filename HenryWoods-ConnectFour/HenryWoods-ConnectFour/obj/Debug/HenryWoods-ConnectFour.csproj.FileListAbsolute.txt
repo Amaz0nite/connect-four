@@ -30,3 +30,13 @@ C:\Users\Henry\Downloads\ConnectFour_Repo\HenryWoods-ConnectFour\HenryWoods-Conn
 C:\Users\Henry\Downloads\ConnectFour_Repo\HenryWoods-ConnectFour\HenryWoods-ConnectFour\obj\Debug\HenryWoods-ConnectFour.csproj.CoreCompileInputs.cache
 C:\Users\Henry\Downloads\ConnectFour_Repo\HenryWoods-ConnectFour\HenryWoods-ConnectFour\obj\Debug\HenryWoods-ConnectFour.exe
 C:\Users\Henry\Downloads\ConnectFour_Repo\HenryWoods-ConnectFour\HenryWoods-ConnectFour\obj\Debug\HenryWoods-ConnectFour.pdb
+C:\Users\Henry Woods\Documents\ConnectFour_Repo\HenryWoods-ConnectFour\HenryWoods-ConnectFour\bin\Debug\HenryWoods-ConnectFour.exe.config
+C:\Users\Henry Woods\Documents\ConnectFour_Repo\HenryWoods-ConnectFour\HenryWoods-ConnectFour\bin\Debug\HenryWoods-ConnectFour.exe
+C:\Users\Henry Woods\Documents\ConnectFour_Repo\HenryWoods-ConnectFour\HenryWoods-ConnectFour\bin\Debug\HenryWoods-ConnectFour.pdb
+C:\Users\Henry Woods\Documents\ConnectFour_Repo\HenryWoods-ConnectFour\HenryWoods-ConnectFour\obj\Debug\HenryWoods-ConnectFour.csprojResolveAssemblyReference.cache
+C:\Users\Henry Woods\Documents\ConnectFour_Repo\HenryWoods-ConnectFour\HenryWoods-ConnectFour\obj\Debug\HenryWoods_ConnectFour.frmConnectFour.resources
+C:\Users\Henry Woods\Documents\ConnectFour_Repo\HenryWoods-ConnectFour\HenryWoods-ConnectFour\obj\Debug\HenryWoods_ConnectFour.frmMainMenu.resources
+C:\Users\Henry Woods\Documents\ConnectFour_Repo\HenryWoods-ConnectFour\HenryWoods-ConnectFour\obj\Debug\HenryWoods_ConnectFour.Properties.Resources.resources
+C:\Users\Henry Woods\Documents\ConnectFour_Repo\HenryWoods-ConnectFour\HenryWoods-ConnectFour\obj\Debug\HenryWoods-ConnectFour.csproj.GenerateResource.Cache
+C:\Users\Henry Woods\Documents\ConnectFour_Repo\HenryWoods-ConnectFour\HenryWoods-ConnectFour\obj\Debug\HenryWoods-ConnectFour.exe
+C:\Users\Henry Woods\Documents\ConnectFour_Repo\HenryWoods-ConnectFour\HenryWoods-ConnectFour\obj\Debug\HenryWoods-ConnectFour.pdb

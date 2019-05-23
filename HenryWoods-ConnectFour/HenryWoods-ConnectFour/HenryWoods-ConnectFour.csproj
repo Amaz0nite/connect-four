@@ -45,7 +45,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cell.cs" />
     <Compile Include="frmConnectFour.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,7 +57,7 @@
     <Compile Include="frmMainMenu.Designer.cs">
       <DependentUpon>frmMainMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Player.cs" />
+    <Compile Include="GameLogic.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmConnectFour.resx">
