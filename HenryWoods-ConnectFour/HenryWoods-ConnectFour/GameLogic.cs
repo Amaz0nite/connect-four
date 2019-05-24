@@ -7,8 +7,17 @@ using System.Windows.Forms;
 
 namespace HenryWoods_ConnectFour
 {
+    /// <summary>
+    /// This class is the logic layer and will handle all of the logic of the game.
+    /// </summary>
     class GameLogic
     {
+        /// <summary>
+        /// Checks the column to see whether or not there is a space available
+        /// </summary>
+        /// <param name="Column">Required to know which column to check</param>
+        /// <param name="GameSpace">Represents the spaces and is required to check against</param>
+        /// <returns>Returns a boolean if the row has a free space available</returns>
         public bool CheckColumnForAvailableSpace(int Column,int[,] GameSpace)
         {
             // Search the column for an empty cell, Returns Boolean
@@ -25,7 +34,13 @@ namespace HenryWoods_ConnectFour
             return FreeSpace;
         }
 
-        // Returns the available Row number in the selected column.
+        
+        /// <summary>
+        /// Checks the row for an available space and returns an integer representing the row
+        /// </summary>
+        /// <param name="Column">Required to know which column to check</param>
+        /// <param name="GameSpace">Represents the spaces and is required to check against</param>
+        /// <returns>Returns an integer that represents a row in the connect four game</returns>
         public int ReturnRowNumber(int Column, int[,] GameSpace)
         {    
             int Unoccupied = 0;
@@ -39,6 +54,12 @@ namespace HenryWoods_ConnectFour
             return 0;
         }
 
+        /// <summary>
+        /// Goes through a series of checking algorithms to check if the player has won connect four
+        /// </summary>
+        /// <param name="Player">A byte number that represents either player one or two</param>
+        /// <param name="GameSpace">Int Array that holds data of all the spaces and who they are occupied by</param>
+        /// <returns>Returns a boolean if the player has won or not</returns>
         public bool CheckWinner(byte Player, int[,] GameSpace)
         {
             int WinCounter = 0;
@@ -131,7 +152,7 @@ namespace HenryWoods_ConnectFour
 
 
 
-            return true;
+            return true; //*************** NEED TO IMPLEMENT THIS ******************
 
 
         }

@@ -6,6 +6,9 @@ using System.Windows.Forms;
 
 namespace HenryWoods_ConnectFour
 {
+    /// <summary>
+    /// This is the start of the program and will direct the user to the Main Menu of the connect four game
+    /// </summary>
     static class Program
     {
         /// <summary>

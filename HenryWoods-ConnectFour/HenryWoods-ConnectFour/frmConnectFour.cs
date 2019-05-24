@@ -57,12 +57,13 @@ namespace HenryWoods_ConnectFour
               
                 if (gameLogic.CheckColumnForAvailableSpace(Column,GameSpace))
                 {
-                    Row = gameLogic.ReturnRowNumber(Column, GameSpace);                                            
+                    Row = gameLogic.ReturnRowNumber(Column, GameSpace);                                      
                     if (PlayerOnesTurn == true) { PlayerColor = Red; } else { PlayerColor = Blue; }
                     //Draws circle representing the players move
                     DrawCircle(Column, Row);               
                     // Set the occupied space to the designated player
-                    if (PlayerOnesTurn == true) { GameSpace[Column,Row] = (int)OccupiedBy.PlayerOne ; gameLogic.CheckWinner(1, GameSpace); } else { GameSpace[Column, Row] = (int)OccupiedBy.PlayerTwo; gameLogic.CheckWinner(2, GameSpace); }                   
+                    if (PlayerOnesTurn == true) { GameSpace[Column,Row] = (int)OccupiedBy.PlayerOne ; gameLogic.CheckWinner((int)OccupiedBy.PlayerOne, GameSpace); }
+                    else { GameSpace[Column, Row] = (int)OccupiedBy.PlayerTwo; gameLogic.CheckWinner((int)OccupiedBy.PlayerTwo, GameSpace); }                   
                     //Changes the players turn
                     if (PlayerOnesTurn == true) { PlayerOnesTurn = false; } else { PlayerOnesTurn = true; }
                 } else { MessageBox.Show("Invalid Selection: Please choose again."); }      
