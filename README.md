@@ -5,3 +5,4 @@
 ### 15-06-2019: Completed the logic for the game. - Henry Woods
 ### 18-05-2019: Fixed a bug and added column selection feature. - Henry Woods
 ### 23-05-2019: Major change in the program, Improved the quality of the code. - Henry Woods
+### 24-05-2019: Added documentation comments to the program. - Henry Woods
