@@ -77,8 +77,8 @@ namespace HenryWoods_ConnectFour
         /// <summary>
         /// This method creates the game board by using the form as a canvas and painting rectangles directly to it.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">On form load</param>
+        /// <param name="e">Paint Event</param>
         private void frmConnectFour_Paint(object sender, PaintEventArgs e)
         {
             int RowCoord = 0;
